@@ -1,4 +1,4 @@
-# Screenzy is the best movie app. Front-end technologies like React, Redux, and SCSS. By building this app I learned basic concepts of react js like jsx, components, props, state, component lifecycle, conditional rendering, lists, keys, and redux, I created more complex logics in javascript to make our react application can be made super interactive and beautiful. 
+ **Screenzy is the best movie app. Front-end technologies like React, Redux, and SCSS. By building this app I learned basic concepts of react js like jsx, components, props, state, component lifecycle, conditional rendering, lists, keys, and redux, I created more complex logics in javascript to make our react application can be made super interactive and beautiful.** 
 
 - first Set app title with  image.
 - Create basic styles in the index.scss file
