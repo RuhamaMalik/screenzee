@@ -1,6 +1,10 @@
+//To create the main state/slice for each page(e.g home, product, etc) we create slices.
+// genres ---> categories
+
+
 import { createSlice } from '@reduxjs/toolkit'
 
-export const counterSlice = createSlice({
+export const homeSlice = createSlice({
   name: 'home',
   initialState: {
     url: {},
@@ -8,15 +12,15 @@ export const counterSlice = createSlice({
   },
   reducers: {
     getApiConfiguration: (state, action) => {
-state.url = action.payload
+      state.url = action.payload
     },
     getGenres: (state, action) => {
-state.genres = action.payload
+      state.genres = action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { getApiConfiguration, getGenres } = homeSlice.actions
 
-export default counterSlice.reducer
+export default homeSlice.reducer
