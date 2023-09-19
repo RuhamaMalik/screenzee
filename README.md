@@ -23,6 +23,11 @@
 - create useFetch Hook  to fetch Apis randomly and retrieve data.
 - use useFetch Hook in HomeBanner to retrieve random background.
 - Use [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) to inspect React components, edit props and state, and identify performance problems.
+- create Img.jsx for lazy loading effect
+- create contentWrapper
+- create mixins.scss for same style
+-style hero banner
+- 
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

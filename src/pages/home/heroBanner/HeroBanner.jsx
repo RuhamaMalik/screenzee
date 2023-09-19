@@ -3,6 +3,8 @@ import './style.scss';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../../../hooks/useFetch';
 import { useSelector } from 'react-redux';
+import Img from './../../../components/lazyLoadImage/Img';
+import ContentWrapper from './../../../components/contentWrapper/ContentWrapper';
 
 
 const HeroBanner = () => {
@@ -10,11 +12,10 @@ const HeroBanner = () => {
     const [query, setQuery] = useState("");
     const navigate = useNavigate();
 
-const {url} = useSelector((state) => {
- return   state.home
-})
+    const { url } = useSelector((state) => {
+        return state.home
+    })
     const { data, loading } = useFetch('movie/upcoming');
-
     useEffect(() => {
         const bg = url.backdrop + data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
         setBackground(bg);
@@ -26,10 +27,15 @@ const {url} = useSelector((state) => {
 
         }
     }
-
     return (
         <div className="heroBanner">
-            <div className="wrapper">
+
+            {!loading && <div className="backdrop-img">
+                <Img src={background} />
+            </div>}
+
+            <div className="opacity-layer"></div>
+            <ContentWrapper>
                 <div className="heroBannerContent">
                     <span className="title">Welcome</span>
                     <span className="subTitle">Unlock a world of entertainment with a vast collection of movies, TV shows, and enthusiasts. Begin your journey now.</span>
@@ -43,7 +49,8 @@ const {url} = useSelector((state) => {
                         <button>Search</button>
                     </div>
                 </div>
-            </div>
+
+            </ContentWrapper>
         </div>
     )
 }
