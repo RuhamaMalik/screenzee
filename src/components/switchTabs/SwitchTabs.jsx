@@ -22,9 +22,12 @@ const SwitchTabs = ({ data, onTabChange }) => {
                         className={`tabItem ${
                             selectedTab === index ? "active" : ""
                         }`}
-                        onClick={() => activeTab(tab, index)}  >
+                        onClick={() => activeTab(tab, index)}
+                    >
                         {tab}
                     </span>
+
+                    
                 ))}
                 <span className="movingBg" style={{ left }} />
             </div>

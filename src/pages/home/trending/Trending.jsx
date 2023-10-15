@@ -5,11 +5,12 @@ import useFetch from '../../../hooks/useFetch'
 import Carousel from '../../../components/carousel/Carousel'
 
 const Trending = () => {
-    const [endPoint, setEndPoint] = useState("day");
-    const { data, loading } = useFetch(`/trending/all/${endPoint}`)
-    const onTabChange = (tab) => {
-        setEndPoint(tab === "day" ? "day" : "week")
+    const [endpoint, setEndpoint] = useState("day");
+    const { data, loading } = useFetch(`/trending/movie/${endpoint}`);
 
+    const onTabChange = (tab) => {
+        setEndpoint(tab === "Day" ? "day" : "week");
+   
     }
 
     return (
