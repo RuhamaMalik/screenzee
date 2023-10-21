@@ -29,6 +29,13 @@
 -style hero banner
 - create header and its all functionality
 
+- fetch genres  data in App.js  by using Promise.all method and store data in store 
+- create genres and use in carousel
+-  code for slider in carousel
+- create popular and top rated
+-  create details  page
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
