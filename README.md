@@ -33,7 +33,8 @@
 - create genres and use in carousel
 -  code for slider in carousel
 - create popular and top rated
--  create details  page
+-  create details  page and details banner
+- works on search page
 
 
 # React + Vite
