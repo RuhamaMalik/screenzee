@@ -20,13 +20,19 @@ const HeroBanner = () => {
         const bg = url.backdrop + data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
         setBackground(bg);
     }, [data]);
-
+    
     const searchQueryHandler = (event) => {
-        if (event.key === "Enter" && query.length > 0) {
-            navigate(`/search/${query}`)
-
+        if ((event.key === "Enter" && query.length > 0) || event.type === 'click') {
+            navigate(`/search/${query}`);
         }
     }
+
+    // const searchQueryHandler = (event) => {
+    //     if (event.key === "Enter" && query.length > 0) {
+    //         navigate(`/search/${query}`)
+
+    //     }
+    // }
     return (
         <div className="heroBanner">
 
@@ -46,7 +52,7 @@ const HeroBanner = () => {
                             onChange={(e) => { setQuery(e.target.value) }}
                             onKeyUp={searchQueryHandler}
                         />
-                        <button>Search</button>
+                        <button onClick={searchQueryHandler}>Search</button>
                     </div>
                 </div>
 

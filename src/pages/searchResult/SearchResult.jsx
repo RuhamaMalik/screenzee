@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
-import noResults from "../../assets/Moviex-images/no-results.png";
+import noResults from "../../assets/images/no-results.png";
 import './style.scss'
 import { fetchDataFromApi } from './../../Utils/api';
 import ContentWrapper from './../../components/contentWrapper/ContentWrapper';
@@ -56,8 +56,8 @@ const SearchResult = () => {
             <>
               <div className="pageTitle">
                 {`Search ${data?.total_results > 1
-                    ? "results"
-                    : "result"
+                  ? "results"
+                  : "result"
                   } of '${query}'`}
               </div>
               <InfiniteScroll

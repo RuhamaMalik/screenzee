@@ -3,11 +3,9 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
-
 import "./style.scss";
-
 import ContentWrapper from "../contentWrapper/ContentWrapper";
-import logo from '../../assets/Moviex-images/movix-logo.png'
+import logo from '../../assets/images/movix-logo.png'
 
 const Header = () => {
   const [show, setShow] = useState("top");
@@ -23,7 +21,7 @@ const Header = () => {
   }, [location]);
 
   const controlNavbar = () => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if (window.scrollY > 200) {
       if (window.scrollY > lastScrollY && !mobileMenu) {
         setShow("hide");
@@ -57,9 +55,10 @@ const Header = () => {
       navigate(`/search/${query}`)
 
     }
+
     setTimeout(() => {
       setShowSearch(false)
-    }, 1000);
+    }, 5000);
   }
 
   const handleNavigation = (type) => {
@@ -75,11 +74,11 @@ const Header = () => {
   return (
     <header className={`header  ${mobileMenu ? 'mobileView' : ''} ${show}`}>
       <ContentWrapper>
- 
+
         <div className="logo" onClick={() => navigate("/")}>
-        <img src={logo} alt="logo" /> <span className="logoText">Screenzee</span>
-                </div>
-      
+          <img src={logo} alt="logo" /> <span className="logoText">Screenzee</span>
+        </div>
+
         <ul className="menuItems">
           <li className="menuItem" onClick={() => { handleNavigation("movie") }} >Movies</li>
           <li className="menuItem" onClick={() => { handleNavigation("tv") }}>Tv Shows</li>

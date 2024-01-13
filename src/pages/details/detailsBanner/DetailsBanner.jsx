@@ -8,7 +8,7 @@ import useFetch from "../../../hooks/useFetch";
 import Genres from "../../../components/genres/Genres";
 import CircleRating from "../../../components/circleRating/CircleRating";
 import Img from "../../../components/lazyLoadImage/Img.jsx";
-import PosterFallback from "../../../assets/Moviex-images/no-poster.png";
+import PosterFallback from "../../../assets/images/no-poster.png";
 import { PlayIcon } from "../PlayIcon.jsx";
 import VideoPopup from "../../../components/videoPopup/videoPopup.jsx";
 
@@ -69,11 +69,11 @@ const DetailsBanner = ({ video, crew }) => {
                                             <CircleRating rating={data.vote_average.toFixed(1)} />
 
                                             <div className="playbtn"
-                                            onClick={() => {
-                                                setShow(true);
-                                                setVideoId(video.key);
-                                                // console.log(video);
-                                            }}
+                                                onClick={() => {
+                                                    setShow(true);
+                                                    setVideoId(video.key);
+                                                    // console.log(video);
+                                                }}
                                             >
                                                 <PlayIcon />
                                                 <span className="text"> Watch Trailer </span>
@@ -180,7 +180,7 @@ const DetailsBanner = ({ video, crew }) => {
                             <div className="row skeleton"></div>
                             <div className="row skeleton"></div>
                         </div>
-                    </ContentWrapper> 
+                    </ContentWrapper>
                 </div>
             )}
         </div>
